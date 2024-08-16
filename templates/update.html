@@ -1,0 +1,22 @@
+{% extends "masterpage.html" %}
+{% block content %}
+  <form action="" method="POST">
+    <label for="taskID">Task ID:</label>
+    <input type="text" name="TaskID" value="{{tasks['taskID']}}" required><br><br>
+    <label for="Taskname">Task Name:</label>
+    <input type="text" name="Taskname" value="{{tasks['Taskname']}}" required><br><br>
+    <label for="Createdat">Created AT:</label>
+    <input type="text" name="Createdat" value="{{tasks['Createdat']}}" required><br><br>
+    <label for="Completedat">Completed AT:</label>
+    <input type="text" name="Completedat" value="{{tasks['Completedat']}}" required><br><br>
+    <label for="Taskname">Status:</label> 
+    <input list="browsers" name="Status" placeholder="Status" value="{{tasks['Status']}}" required>
+    <datalist id="browsers">
+      <option value="Not Yet Started">
+      <option value="In Progress">
+      <option value="Completed">
+    </datalist><br><br>
+    <input type="submit" value="Update" class="mt-3 btn btn-success">
+  </form>
+
+{% endblock %}
